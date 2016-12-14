@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber_part.SourceEntity" table="Source" schema="mydb">
+        <id name="sourceId">
+            <column name="Source_id" sql-type="int(11)"/>
+        </id>
+        <property name="sourceName">
+            <column name="Source_name" sql-type="varchar(180)" length="180"/>
+        </property>
+        <property name="sourceReplace">
+            <column name="Source_replace" sql-type="varchar(180)" length="180" not-null="true"/>
+        </property>
+        <property name="sourceFunc">
+            <column name="Source_func" sql-type="varchar(180)" length="180" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

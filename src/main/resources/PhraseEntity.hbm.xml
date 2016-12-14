@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber_part.PhraseEntity" table="Phrase" schema="mydb">
+        <id name="phraseId">
+            <column name="Phrase_id" sql-type="int(11)"/>
+        </id>
+    </class>
+</hibernate-mapping>

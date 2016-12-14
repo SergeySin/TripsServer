@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber_part.WordEntity" table="Word" schema="mydb">
+        <id name="wordId">
+            <column name="Word_id" sql-type="int(11)"/>
+        </id>
+        <property name="wordName">
+            <column name="Word_name" sql-type="varchar(180)" length="180" not-null="true"/>
+        </property>
+        <property name="wordPhraseId">
+            <column name="Word_phrase_id" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber_part.TripsEntity" table="Trips" schema="mydb">
+        <id name="tripsId">
+            <column name="trips_id" sql-type="int(11)"/>
+        </id>
+        <property name="tripsUserId">
+            <column name="trips_user_id" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="tripsUserPost">
+            <column name="trips_user_post" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="tripsUserComment">
+            <column name="trips_user_comment" sql-type="varchar(90)" length="90" not-null="true"/>
+        </property>
+        <property name="tripsFrom">
+            <column name="trips_from" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="tripsTo">
+            <column name="trips_to" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="tripsGroupId">
+            <column name="trips_group_id" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="tripsTime">
+            <column name="trips_time" sql-type="time" not-null="true"/>
+        </property>
+        <property name="tripsDate">
+            <column name="trips_date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="tripsPostDate">
+            <column name="trips_post_date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="tripsPostTime">
+            <column name="trips_post_time" sql-type="time" not-null="true"/>
+        </property>
+        <property name="tripsAnalyseDirection">
+            <column name="trips_analyse_direction" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="tripsAnalyseDate">
+            <column name="trips_analyse_date" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="tripsAnalyseTime">
+            <column name="trips_analyse_time" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
